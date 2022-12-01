@@ -105,8 +105,10 @@ function SoilBag.cl_updateSoilbagRenderables( self )
 	for k,v in pairs( renderablesTp ) do currentRenderablesTp[#currentRenderablesTp+1] = v end
 	for k,v in pairs( renderablesFp ) do currentRenderablesFp[#currentRenderablesFp+1] = v end
 
-	for k,v in pairs( soilbagRenderables ) do currentRenderablesTp[#currentRenderablesTp+1] = v end
-	for k,v in pairs( soilbagRenderables ) do currentRenderablesFp[#currentRenderablesFp+1] = v end
+	for k,v in pairs( soilbagRenderables ) do 
+		currentRenderablesTp[#currentRenderablesTp+1] = v 
+		currentRenderablesFp[#currentRenderablesFp+1] = v
+	end
 	
 	self.tool:setTpRenderables( currentRenderablesTp )
 	if self.tool:isLocal() then
